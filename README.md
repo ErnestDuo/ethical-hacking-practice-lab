@@ -15,13 +15,13 @@ This repository documents a practical cybersecurity assignment focused on networ
 **Command:** `nmap -sn 10.0.2.15/24`
 **Objective:** To identify live hosts on the local network without performing a full port scan.
 **Result:** The scan confirmed the target `10.0.2.15` is "up" with a latency of 0.011s.
-![Host Discovery Scan]([Your_Image_Screenshot_2025-12-12_092133.jpg])
+
 
 ### 2. Basic Port Scanning
 **Command:** `nmap 10.0.2.15`
 **Objective:** To identify open TCP ports on the target.
 **Result:** Port **22/tcp (ssh)** was found open. 999 other ports were closed/refused.
-![Port Scan]([Your_Image_Screenshot_2025-12-12_091835.jpg])
+
 
 ### 3. Service Version Detection
 **Command:** `nmap -v -p22 -sV -T4 10.0.2.15`
@@ -29,13 +29,13 @@ This repository documents a practical cybersecurity assignment focused on networ
 **Result:** * **Service:** SSH
 * **Version:** OpenSSH 9.3p2 Debian 1 (Protocol 2.0)
 * **Significance:** Knowing the exact version helps identify potential vulnerabilities specific to that software release.
-![Service Version Scan]([Your_Image_Screenshot_2025-12-12_092540.jpg])
+
 
 ### 4. OS Fingerprinting
 **Command:** `sudo nmap -O 10.0.2.15`
 **Objective:** To determine the target's operating system based on TCP/IP stack behavior.
 **Result:** The system was identified as running a **Linux 2.6.X kernel** (specifically matching Linux 2.6.32 signatures).
-![OS Detection]([Your_Image_Screenshot_2025-12-12_092133.jpg])
+
 
 ---
 
@@ -45,7 +45,7 @@ This repository documents a practical cybersecurity assignment focused on networ
 **Command:** `ls(IP)`
 **Objective:** To inspect the default fields of an IP header within Scapy.
 **Observation:** Verified standard IP fields such as `src` (Source), `dst` (Destination), `ttl` (Time to Live), and `proto` (Protocol).
-![Scapy LS Command]([Your_Image_Screenshot_2025-12-12_095620.jpg])
+
 
 ### 2. Traffic Sniffing and Summary
 **Command:** `a.summary()` (After running `sniff()`)
@@ -54,7 +54,7 @@ This repository documents a practical cybersecurity assignment focused on networ
 * **DNS:** Queries to `contile.services.mozilla.com`.
 * **TCP/HTTPS:** Encrypted traffic on port 443 involving IP `34.36.137.203`.
 * **Protocol Hierarchy:** The summary displays the encapsulation: `Ether / IP / TCP`.
-![Scapy Sniff Summary]([Your_Image_Screenshot_2025-12-12_121958.jpg])
+
 
 ---
 
